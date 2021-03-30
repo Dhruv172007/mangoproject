@@ -19,14 +19,14 @@ function setup() {
 	world = engine.world;
 
 	mango1=new mango(1100,100,30);
-    mango2=new mango(1100,100,30);
-	mango3=new mango(1100,100,30);
-	mango4=new mango(1100,100,30);
-    mango5=new mango(1100,100,30);
-	mango6=new mango(1100,100,30);
-
-	stone1 = new stone1(200,340,200,300);
-
+  mango2=new mango(1000,100,30);
+	mango3=new mango(1050,200,30);
+	mango4=new mango(1150,100,30);
+  mango5=new mango(1100,150,30);
+	mango6=new mango(1100,200,30);
+  stone1 = new stone(200,340,200,300);
+  
+  slingshot1=new SlingShot(stone1.body,{x:235,y:440})
 	treeObj=new tree(1050,580);
 	groundObject=new ground(width/2,600,width,20);
 	
@@ -39,11 +39,13 @@ function draw() {
   background(230);
   image(boy ,200,340,200,300);
   treeObj.display();
+  stone1.display();
   mango1.display();
   mango2.display();
   mango3.display();
   mango4.display();
   mango5.display();
   mango6.display();
+  slingshot1.display();
   groundObject.display();
 }
